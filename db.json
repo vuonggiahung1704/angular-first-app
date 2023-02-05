@@ -1,0 +1,62 @@
+{
+  "sellers": [
+    {
+      "name": "123",
+      "password": "123456",
+      "email": "gh@gmaail.com",
+      "id": 1
+    },
+    {
+      "name": "",
+      "password": "",
+      "email": "",
+      "id": 2
+    },
+    {
+      "name": "asd",
+      "password": "41",
+      "email": "eww",
+      "id": 3
+    },
+    {
+      "name": "gia",
+      "password": "123",
+      "email": "dsa@gmial.com",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "name": "das",
+      "description": "213",
+      "price": 323,
+      "quantity": 213,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-11-den-1-1-1-org.jpg",
+      "id": 1
+    },
+    {
+      "name": "das",
+      "description": "213",
+      "price": 323,
+      "quantity": 213,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-11-den-1-1-1-org.jpg",
+      "id": 2
+    },
+    {
+      "name": "bia",
+      "description": "heidksa",
+      "price": "2",
+      "quantity": "213",
+      "image": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-11-den-1-1-1-org.jpg",
+      "id": 3
+    },
+    {
+      "name": "dsa",
+      "description": "123",
+      "price": 2,
+      "quantity": 213,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-11-den-1-1-1-org.jpg",
+      "id": 4
+    }
+  ]
+}
