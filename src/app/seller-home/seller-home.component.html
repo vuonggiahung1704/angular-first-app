@@ -1,0 +1,35 @@
+<h1>List Product</h1>
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show">
+  <strong>Success!</strong> Your data has been delete successfully
+  <button type="button" (click)="closeAlert()" class="btn-close"></button>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <td scope="col">#</td>
+      <td scope="col">Name</td>
+      <td scope="col">Description</td>
+      <td scope="col">Price</td>
+      <td scope="col">Quantiry</td>
+      <td scope="col"></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of productList">
+      <th>{{ item.id }}</th>
+      <th>{{ item.name }}</th>
+      <th>{{ item.description }}</th>
+      <th>{{ item.price }}</th>
+      <th>{{ item.quantity }}</th>
+      <th><img class="img-fluid" src="{{ item.image }}" alt="" /></th>
+      <th>
+        <a routerLink="/seller-edit-product/{{ item.id }}" class="btn btn-info"
+          >Edit</a
+        >
+        <button class="btn btn-danger" (click)="deleteProduct(item.id)">
+          Delete
+        </button>
+      </th>
+    </tr>
+  </tbody>
+</table>

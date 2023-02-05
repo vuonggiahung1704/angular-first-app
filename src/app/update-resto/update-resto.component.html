@@ -1,0 +1,43 @@
+<h1>Update Product</h1>
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show">
+  <strong>Success!</strong> Your data has been entered successfully
+  <button type="button" (click)="closeAlert()" class="btn-close"></button>
+</div>
+<form #productEdit="ngForm" (ngSubmit)="updateProduct(productEdit.value)">
+  <input
+    type="text"
+    class="form-control mb-3"
+    placeholder="Enter Name"
+    name="name"
+    ngModel="{{ productData?.name }}"
+  />
+  <input
+    type="text"
+    class="form-control mb-3"
+    placeholder="Enter Description"
+    name="description"
+    ngModel="{{ productData?.description }}"
+  />
+  <input
+    type="number"
+    class="form-control mb-3"
+    placeholder="Enter Price"
+    name="price"
+    ngModel="{{ productData?.price }}"
+  />
+  <input
+    type="number"
+    class="form-control mb-3"
+    placeholder="Enter Quantity"
+    name="quantity"
+    ngModel="{{ productData?.quantity }}"
+  />
+  <input
+    type="text"
+    class="form-control mb-3"
+    placeholder="Enter Image"
+    name="image"
+    ngModel="{{ productData?.image }}"
+  />
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>

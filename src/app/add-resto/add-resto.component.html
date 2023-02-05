@@ -1,0 +1,43 @@
+<h1>Add Product</h1>
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show">
+  <strong>Success!</strong> Your data has been entered successfully
+  <button type="button" (click)="closeAlert()" class="btn-close"></button>
+</div>
+<form #productAdd="ngForm" (ngSubmit)="addProduct(productAdd.value)">
+  <input
+    type="text"
+    class="form-control mb-3"
+    placeholder="Enter Name"
+    ngModel
+    name="name"
+  />
+  <input
+    type="text"
+    class="form-control mb-3"
+    placeholder="Enter Description"
+    ngModel
+    name="description"
+  />
+  <input
+    type="number"
+    class="form-control mb-3"
+    placeholder="Enter Price"
+    ngModel
+    name="price"
+  />
+  <input
+    type="number"
+    class="form-control mb-3"
+    placeholder="Enter Quantity"
+    ngModel
+    name="quantity"
+  />
+  <input
+    type="text"
+    class="form-control mb-3"
+    placeholder="Enter Image"
+    ngModel
+    name="image"
+  />
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>

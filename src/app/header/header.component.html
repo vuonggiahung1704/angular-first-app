@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">E-Commerce Angular</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form *ngIf="menuType === 'default'" class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <div [ngSwitch]="menuType">
+        <ul *ngSwitchCase="'default'" class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="seller-auth">Seller</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="cart">Cart(0)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="login">Login</a>
+          </li>
+        </ul>
+        <ul *ngSwitchCase="'seller'" class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="seller-auth">List Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="seller-add-product">Add PRoduct</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="logout()">Logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">{{ sellerName }} </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
